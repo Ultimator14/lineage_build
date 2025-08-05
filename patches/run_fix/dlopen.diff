@@ -1,0 +1,70 @@
+# Apply commits
+# https://github.com/LineageOS/android_device_oneplus_sm8150-common/commit/c442ae3a2996bd9c55a6f26fe60b6806a8f2ac07
+# https://github.com/LineageOS/android_device_oneplus_sm8150-common/commit/ae2e3400620c214c210d790cddb11e953ae0f5f0
+# https://github.com/LineageOS/android_device_oneplus_sm8150-common/commit/612621646f002154d3a61183efeab9fa161e3d8c
+# https://github.com/LineageOS/android_device_oneplus_sm8150-common/commit/71b88dc55a4929e94ab8e3a38bbe3dc097133bcf
+# + libspl.so also in this repo
+# 
+# Should fix errors in early boot like
+# dlopen(libsecureui.so, RLTD_NOW) is failed.... dlopen failed: library "libsecureui_svcsock.so" not found: needed by /vendor/lib64/libsecureui.so in namespace (default)
+# dlopen(libspl.so, RLTD_NOW) is failed.... dlopen failed: library "libspl.so" not found
+diff --git a/proprietary-files.txt b/proprietary-files.txt
+index 17694e5..6f3a48d 100644
+--- a/proprietary-files.txt
++++ b/proprietary-files.txt
+@@ -351,7 +351,7 @@ odm/firmware/fastchg/20804/oplus_vooc_fw.bin
+ odm/firmware/fastchg/132700/oplus_vooc_fw_rt5125.bin
+ 
+ # CNE
+-vendor/app/CneApp/CneApp.apk
++vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_symlink
+ vendor/bin/cnd
+ vendor/bin/mutualex
+ vendor/etc/cne/mwqem.conf
+@@ -510,6 +510,7 @@ vendor/lib64/libops.so
+ vendor/lib64/libqisl.so
+ vendor/lib64/librpmb.so
+ vendor/lib64/libsecureui.so
++vendor/lib64/libsecureui_svcsock.so
+ vendor/lib64/libssd.so
+ vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
+ 
+@@ -558,10 +559,10 @@ vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+ 
+ # Graphics (Adreno)
+ vendor/lib/egl/eglSubDriverAndroid.so
+-vendor/lib/egl/libEGL_adreno.so
++vendor/lib/egl/libEGL_adreno.so;SYMLINK=vendor/lib/libEGL_adreno.so
+ vendor/lib/egl/libGLESv1_CM_adreno.so
+-vendor/lib/egl/libGLESv2_adreno.so
+-vendor/lib/egl/libq3dtools_adreno.so
++vendor/lib/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib/libGLESv2_adreno.so
++vendor/lib/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib/libq3dtools_adreno.so
+ vendor/lib/egl/libq3dtools_esx.so
+ vendor/lib/libC2D2.so
+ vendor/lib/libCB.so
+@@ -574,10 +575,10 @@ vendor/lib/libgsl.so
+ vendor/lib/libllvm-glnext.so
+ vendor/lib/libllvm-qcom.so
+ vendor/lib64/egl/eglSubDriverAndroid.so
+-vendor/lib64/egl/libEGL_adreno.so
++vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so
+ vendor/lib64/egl/libGLESv1_CM_adreno.so
+-vendor/lib64/egl/libGLESv2_adreno.so
+-vendor/lib64/egl/libq3dtools_adreno.so
++vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so
++vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so
+ vendor/lib64/egl/libq3dtools_esx.so
+ vendor/lib64/libC2D2.so
+ vendor/lib64/libCB.so
+@@ -695,8 +696,8 @@ system_ext/lib64/lib-imsvt.so|38b39cafe351be5abc7b6ae5055ea1f390032502
+ system_ext/lib64/lib-imsvtextutils.so|16bed08e80919635fcb7ace934bd5f16f059c182
+ system_ext/lib64/lib-imsvtutils.so|9e45b76b14600df92782e6c8213af0dcddbe80be
+ system_ext/lib64/libdiag_system.so|35bace09ba74af348b9530fb02cf7088c90a44fd
+-system_ext/lib64/libimscamera_jni.so|ff3d65093f5bf19fba95798b0a121ee510b0f72e
+-system_ext/lib64/libimsmedia_jni.so|9f192af40439abb04d5d5f0f3de5b772c9381114
++system_ext/lib64/libimscamera_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so|ff3d65093f5bf19fba95798b0a121ee510b0f72e
++system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so|9f192af40439abb04d5d5f0f3de5b772c9381114
+ system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|0c11ff5a7a671073ee40e17d46aa8b7acbf1dc0a
+ system_ext/priv-app/ims/ims.apk|f0d834acbc77e7830459e0246f5073e1b9ba8657
+ 

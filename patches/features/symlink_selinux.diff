@@ -1,0 +1,112 @@
+diff --git a/prebuilts/api/202404/private/file_contexts b/prebuilts/api/202404/private/file_contexts
+index 3a65d81ad..e6abec399 100644
+--- a/prebuilts/api/202404/private/file_contexts
++++ b/prebuilts/api/202404/private/file_contexts
+@@ -69,6 +69,9 @@
+ /d                  u:object_r:rootfs:s0
+ /etc                u:object_r:rootfs:s0
+ /sdcard             u:object_r:rootfs:s0
++/usr                u:object_r:rootfs:s0
++/var                u:object_r:rootfs:s0
++/xbin               u:object_r:rootfs:s0
+ 
+ # SELinux policy files
+ /vendor_file_contexts   u:object_r:file_contexts_file:s0
+diff --git a/prebuilts/api/29.0/private/file_contexts b/prebuilts/api/29.0/private/file_contexts
+index 530bd45fa..fab77dfce 100644
+--- a/prebuilts/api/29.0/private/file_contexts
++++ b/prebuilts/api/29.0/private/file_contexts
+@@ -39,6 +39,9 @@
+ /d                  u:object_r:rootfs:s0
+ /etc                u:object_r:rootfs:s0
+ /sdcard             u:object_r:rootfs:s0
++/usr                u:object_r:rootfs:s0
++/var                u:object_r:rootfs:s0
++/xbin               u:object_r:rootfs:s0
+ 
+ # SELinux policy files
+ /vendor_file_contexts   u:object_r:file_contexts_file:s0
+diff --git a/prebuilts/api/30.0/private/file_contexts b/prebuilts/api/30.0/private/file_contexts
+index 71a72b4de..bafeff6e6 100644
+--- a/prebuilts/api/30.0/private/file_contexts
++++ b/prebuilts/api/30.0/private/file_contexts
+@@ -40,6 +40,9 @@
+ /d                  u:object_r:rootfs:s0
+ /etc                u:object_r:rootfs:s0
+ /sdcard             u:object_r:rootfs:s0
++/usr                u:object_r:rootfs:s0
++/var                u:object_r:rootfs:s0
++/xbin               u:object_r:rootfs:s0
+ 
+ # SELinux policy files
+ /vendor_file_contexts   u:object_r:file_contexts_file:s0
+diff --git a/prebuilts/api/31.0/private/file_contexts b/prebuilts/api/31.0/private/file_contexts
+index 351cd7c5f..c4dbd8f81 100644
+--- a/prebuilts/api/31.0/private/file_contexts
++++ b/prebuilts/api/31.0/private/file_contexts
+@@ -45,6 +45,9 @@
+ /d                  u:object_r:rootfs:s0
+ /etc                u:object_r:rootfs:s0
+ /sdcard             u:object_r:rootfs:s0
++/usr                u:object_r:rootfs:s0
++/var                u:object_r:rootfs:s0
++/xbin               u:object_r:rootfs:s0
+ 
+ # SELinux policy files
+ /vendor_file_contexts   u:object_r:file_contexts_file:s0
+diff --git a/prebuilts/api/32.0/private/file_contexts b/prebuilts/api/32.0/private/file_contexts
+index 48d98ff98..a89eb2542 100644
+--- a/prebuilts/api/32.0/private/file_contexts
++++ b/prebuilts/api/32.0/private/file_contexts
+@@ -45,6 +45,9 @@
+ /d                  u:object_r:rootfs:s0
+ /etc                u:object_r:rootfs:s0
+ /sdcard             u:object_r:rootfs:s0
++/usr                u:object_r:rootfs:s0
++/var                u:object_r:rootfs:s0
++/xbin               u:object_r:rootfs:s0
+ 
+ # SELinux policy files
+ /vendor_file_contexts   u:object_r:file_contexts_file:s0
+diff --git a/prebuilts/api/33.0/private/file_contexts b/prebuilts/api/33.0/private/file_contexts
+index 65baa5ddd..f14cc57ef 100644
+--- a/prebuilts/api/33.0/private/file_contexts
++++ b/prebuilts/api/33.0/private/file_contexts
+@@ -46,6 +46,9 @@
+ /d                  u:object_r:rootfs:s0
+ /etc                u:object_r:rootfs:s0
+ /sdcard             u:object_r:rootfs:s0
++/usr                u:object_r:rootfs:s0
++/var                u:object_r:rootfs:s0
++/xbin               u:object_r:rootfs:s0
+ 
+ # SELinux policy files
+ /vendor_file_contexts   u:object_r:file_contexts_file:s0
+diff --git a/prebuilts/api/34.0/private/file_contexts b/prebuilts/api/34.0/private/file_contexts
+index 0caddf25b..d6b5df427 100644
+--- a/prebuilts/api/34.0/private/file_contexts
++++ b/prebuilts/api/34.0/private/file_contexts
+@@ -46,6 +46,9 @@
+ /d                  u:object_r:rootfs:s0
+ /etc                u:object_r:rootfs:s0
+ /sdcard             u:object_r:rootfs:s0
++/usr                u:object_r:rootfs:s0
++/var                u:object_r:rootfs:s0
++/xbin               u:object_r:rootfs:s0
+ 
+ # SELinux policy files
+ /vendor_file_contexts   u:object_r:file_contexts_file:s0
+diff --git a/private/file_contexts b/private/file_contexts
+index 63b3d1eff..0c8cc823f 100644
+--- a/private/file_contexts
++++ b/private/file_contexts
+@@ -69,6 +69,9 @@
+ /d                  u:object_r:rootfs:s0
+ /etc                u:object_r:rootfs:s0
+ /sdcard             u:object_r:rootfs:s0
++/usr                u:object_r:rootfs:s0
++/var                u:object_r:rootfs:s0
++/xbin               u:object_r:rootfs:s0
+ 
+ # SELinux policy files
+ /vendor_file_contexts   u:object_r:file_contexts_file:s0

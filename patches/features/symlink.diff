@@ -1,0 +1,24 @@
+diff --git a/rootdir/create_root_structure.mk b/rootdir/create_root_structure.mk
+index 1daf239b4..03d504616 100644
+--- a/rootdir/create_root_structure.mk
++++ b/rootdir/create_root_structure.mk
+@@ -31,6 +31,9 @@ LOCAL_POST_INSTALL_CMD := mkdir -p $(addprefix $(TARGET_ROOT_OUT)/, \
+     linkerconfig second_stage_resources postinstall tmp $(BOARD_ROOT_EXTRA_FOLDERS)); \
+     ln -sf /system/bin $(TARGET_ROOT_OUT)/bin; \
+     ln -sf /system/etc $(TARGET_ROOT_OUT)/etc; \
++    ln -sf /system/usr $(TARGET_ROOT_OUT)/usr; \
++    ln -sf /system/var $(TARGET_ROOT_OUT)/var; \
++    ln -sf /system/xbin $(TARGET_ROOT_OUT)/xbin; \
+     ln -sf /data/user_de/0/com.android.shell/files/bugreports $(TARGET_ROOT_OUT)/bugreports; \
+     ln -sfn /sys/kernel/debug $(TARGET_ROOT_OUT)/d; \
+     ln -sf /storage/self/primary $(TARGET_ROOT_OUT)/sdcard; \
+@@ -39,6 +42,9 @@ LOCAL_POST_INSTALL_CMD := mkdir -p $(addprefix $(TARGET_ROOT_OUT)/, \
+ ALL_ROOTDIR_SYMLINKS := \
+   $(TARGET_ROOT_OUT)/bin \
+   $(TARGET_ROOT_OUT)/etc \
++  $(TARGET_ROOT_OUT)/usr \
++  $(TARGET_ROOT_OUT)/var \
++  $(TARGET_ROOT_OUT)/xbin \
+   $(TARGET_ROOT_OUT)/bugreports \
+   $(TARGET_ROOT_OUT)/d \
+   $(TARGET_ROOT_OUT)/sdcard

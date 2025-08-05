@@ -1,0 +1,103 @@
+diff --git a/java/com/android/dialer/callrecord/res/xml/call_record_states.xml b/java/com/android/dialer/callrecord/res/xml/call_record_states.xml
+index 0d3108691..23d0c1ac0 100644
+--- a/java/com/android/dialer/callrecord/res/xml/call_record_states.xml
++++ b/java/com/android/dialer/callrecord/res/xml/call_record_states.xml
+@@ -29,7 +29,7 @@
+          Penal Code, as of 2014:
+            https://sherloc.unodc.org/res/cld/document/codi_penal_andorra_as_of_2014_html/Andorra_codi_penal_as_of_2014.pdf
+     -->
+-    <country iso="ad" allowed="false" />
++    <country iso="ad" allowed="true" />
+ 
+     <!-- Enable recording for Albania:
+          Relevant laws and/or legal precedents:
+@@ -193,7 +193,7 @@
+            in a more clear way or enough evidence is shown to substantiate how the courts interpret
+            them when prosecuting private citizens, Australia shall not have call recording enabled.
+     -->
+-    <country iso="au" allowed="false" />
++    <country iso="au" allowed="true" />
+ 
+     <!-- Enable recording for Bosnia and Herzegovina:
+          Republika Srpska:
+@@ -343,7 +343,7 @@
+          Criminal Code:
+            https://www.admin.ch/opc/en/classified-compilation/19370083/index.html#a179ter
+     -->
+-    <country iso="ch" allowed="false" />
++    <country iso="ch" allowed="true" />
+ 
+     <!-- Enable recording for Chile:
+          The Chilean law is considered a type of civil law, hence judges base their decisions on
+@@ -444,7 +444,7 @@
+          Explanation of lawful use of a recording in a legal dispute:
+            https://www.anwalt.de/rechtstipps/gespraechsmitschnitte-als-beweismittel-ungeeignet_057458.html
+     -->
+-    <country iso="de" allowed="false" />
++    <country iso="de" allowed="true" />
+ 
+     <!-- Enable recording for Denmark, Faroe Islands and Greeenland:
+          Chapter 27, Article 263(3) of the Criminal Code of Denmark denotes that a person is liable
+@@ -632,7 +632,7 @@
+          Law 19 of 2016:
+            https://jdih.kominfo.go.id/produk_hukum/view/id/555/t/undangundang+nomor+19+tahun+2016+tanggal+25+november+2016
+     -->
+-    <country iso="id" allowed="false" />
++    <country iso="id" allowed="true" />
+ 
+     <!-- Enable recording for Ireland:
+          The Irish Constitution does not specifically state a right to privacy. Subsection (6) of
+@@ -676,7 +676,7 @@
+            https://www.ynet.co.il/articles/0,7340,L-3043583,00.html
+     -->
+     <country iso="il" allowed="true" />
+-    <country iso="ps" allowed="false" />
++    <country iso="ps" allowed="true" />
+ 
+     <!--Enable recording for India:
+          No clear definition exists on the matter of call recordings being made by one side.
+@@ -701,7 +701,7 @@
+          Electronic Communications Act:
+            https://www.government.is/Publications/Legislation/Lex/?newsid=86c9a6a9-fab5-11e7-9423-005056bc4d74
+     -->
+-    <country iso="is" allowed="false" />
++    <country iso="is" allowed="true" />
+ 
+     <!-- Enable recording for Iran:
+          Based on Article 25 of the Iranian Constitution, recording one's own calls, as a private
+@@ -910,7 +910,7 @@
+          Penal Code:
+            https://www.legimonaco.mc/305/legismclois.nsf/ViewCode!OpenView&Start=1&Count=300&RestrictToCategory=CODE%20P%C3%89NAL
+     -->
+-    <country iso="mc" allowed="false" />
++    <country iso="mc" allowed="true" />
+ 
+     <!-- Enable recording for Moldova:
+          Article 30 of the Constitution of Moldova ensures the privacy of correspondence. No
+@@ -1066,7 +1066,7 @@
+          33 L.P.R.A. § 4809. Recording of communications by a participant:
+            https://bit.ly/2UqbrRC
+     -->
+-    <country iso="pr" allowed="false" />
++    <country iso="pr" allowed="true" />
+ 
+     <!-- Disable recording for Portugal:
+          Privacy is a fundamental right in Portuguese law, as it is defined in Articles 26(1) and 34
+@@ -1108,7 +1108,7 @@
+            http://www.dgsi.pt/jtrc.nsf/c3fb530030ea1c61802568d9005cd5bb/c5bb36d9a0470bdd80257b400048f9f2?OpenDocument
+            http://www.dgsi.pt/jtrg.nsf/86c25a698e4e7cb7802579ec004d3832/ff947b8a3fda778780257c0000478b5a
+     -->
+-    <country iso="pt" allowed="false" />
++    <country iso="pt" allowed="true" />
+ 
+     <!-- Enable recording for Romania:
+          The Telecommunications Act (506/2004) states that the recording of a conversation by a
+@@ -1293,7 +1293,7 @@
+          Two-party consent state laws:
+            https://recordinglaw.com/party-two-party-consent-states/
+     -->
+-    <country iso="us,vi,gu" allowed="false" />
++    <country iso="us,vi,gu" allowed="true" />
+ 
+     <!-- Enable recording in Uruguay.
+ 

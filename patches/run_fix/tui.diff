@@ -1,0 +1,24 @@
+# Re-add removed tui entry in vintf manifest, was removed 2 commits ago but tui was added again 1 commit ago
+# However the entry was not restored. Restore it here to (hopefully) avoid logcat messages like:
+# HidlServiceManagement: Service vendor.qti.hardware.tui_comm@1.0::ITuiComm/default must be in VINTF manifest in order to register/get.
+# vendor.qti.hardware.tui_comm@1.0-service-qti: Cannot register ITuiComm HAL service
+diff --git a/manifest.xml b/manifest.xml
+index bd70dd2..273ba4d 100644
+--- a/manifest.xml
++++ b/manifest.xml
+@@ -530,6 +530,15 @@
+             <instance>default</instance>
+         </interface>
+     </hal>
++    <hal format="hidl">
++      <name>vendor.qti.hardware.tui_comm</name>
++      <transport>hwbinder</transport>
++      <version>1.0</version>
++      <interface>
++          <name>ITuiComm</name>
++          <instance>default</instance>
++      </interface>
++    </hal>
+     <hal format="hidl">
+         <name>vendor.qti.hardware.wifi.wifilearner</name>
+         <transport>hwbinder</transport>

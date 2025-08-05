@@ -1,0 +1,11 @@
+diff --git a/device.mk b/device.mk
+index b925e4d..48686ad 100644
+--- a/device.mk
++++ b/device.mk
+@@ -503,3 +503,6 @@ PRODUCT_PACKAGES += \
+ 
+ # Inherit from the proprietary files makefile.
+ $(call inherit-product, vendor/oneplus/avicii/avicii-vendor.mk)
++
++# Inline Gapps build
++include vendor/gapps/arm64/arm64-vendor.mk

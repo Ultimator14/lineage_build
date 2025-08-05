@@ -1,0 +1,14 @@
+diff --git a/src/com/android/settings/RingtonePreference.java b/src/com/android/settings/RingtonePreference.java
+index 6b9dad7ffbf..7e02aa57f70 100644
+--- a/src/com/android/settings/RingtonePreference.java
++++ b/src/com/android/settings/RingtonePreference.java
+@@ -74,8 +74,7 @@ public class RingtonePreference extends Preference {
+                 true);
+         mShowSilent = a.getBoolean(com.android.internal.R.styleable.RingtonePreference_showSilent,
+                 true);
+-        setIntent(new Intent(RingtoneManager.ACTION_RINGTONE_PICKER)
+-                .setPackage(context.getString(R.string.config_sound_picker_package_name)));
++		setIntent(new Intent(RingtoneManager.ACTION_RINGTONE_PICKER));
+         setUserId(UserHandle.myUserId());
+         a.recycle();
+     }

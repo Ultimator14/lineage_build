@@ -1,0 +1,37 @@
+# Same as the other patch but must be applied to
+# device/qcom/sepolicy_vndr
+
+# Fix build errors
+# ERROR 'duplicate entry for genfs entry (sysfs, /devices/platform/soc/18800000.qcom,icnss/wakeup)'
+# ERROR 'duplicate entry for genfs entry (sysfs, /devices/platform/soc/8300000.qcom,turing/wakeup)'
+# ERROR 'duplicate entry for genfs entry (sysfs, /devices/platform/soc/9800000.qcom,npu/wakeup)'
+# ERROR 'duplicate entry for genfs entry (sysfs, /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm7250b@2:qcom,power-on@800/wakeup)'
+# Caused by commit https://github.com/LineageOS/android_device_qcom_sepolicy_vndr/commit/24344853f264d473dea612c340bef146999e4a7d
+# Fix see
+# https://review.lineageos.org/c/LineageOS/android_device_samsung_sm7125-common/+/367935
+diff --git a/generic/vendor/lito/genfs_contexts b/generic/vendor/lito/genfs_contexts
+--- a/generic/vendor/lito/genfs_contexts
++++ b/generic/vendor/lito/genfs_contexts
+@@ -120,18 +120,18 @@ genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-1/
+ genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/fps_periodicity_ms u:object_r:vendor_sysfs_graphics:s0
+ 
+ # wakeup sysfs nodes listed by SuspendSepolicyTests.sh
+-genfscon sysfs /devices/platform/soc/18800000.qcom,icnss/wakeup u:object_r:sysfs_wakeup:s0
++#genfscon sysfs /devices/platform/soc/18800000.qcom,icnss/wakeup u:object_r:sysfs_wakeup:s0
+ genfscon sysfs /devices/platform/soc/1e00000.qcom,ipa/wakeup u:object_r:sysfs_wakeup:s0
+ genfscon sysfs /devices/platform/soc/3000000.qcom,lpass/wakeup u:object_r:sysfs_wakeup:s0
+ genfscon sysfs /devices/platform/soc/4080000.qcom,mss/wakeup u:object_r:sysfs_wakeup:s0
+-genfscon sysfs /devices/platform/soc/8300000.qcom,turing/wakeup u:object_r:sysfs_wakeup:s0
++#genfscon sysfs /devices/platform/soc/8300000.qcom,turing/wakeup u:object_r:sysfs_wakeup:s0
+ genfscon sysfs /devices/platform/soc/880000.i2c/i2c-0/0-0008/wakeup u:object_r:sysfs_wakeup:s0
+ genfscon sysfs /devices/platform/soc/884000.qcom,qup_uart/wakeup u:object_r:sysfs_wakeup:s0
+-genfscon sysfs /devices/platform/soc/9800000.qcom,npu/wakeup u:object_r:sysfs_wakeup:s0
++#genfscon sysfs /devices/platform/soc/9800000.qcom,npu/wakeup u:object_r:sysfs_wakeup:s0
+ genfscon sysfs /devices/platform/soc/990000.i2c/i2c-2/2-0034/990000.i2c:qcom,smb1396@34:qcom,div2_cp/wakeup u:object_r:sysfs_wakeup:s0
+ genfscon sysfs /devices/platform/soc/aab0000.qcom,venus/wakeup u:object_r:sysfs_wakeup:s0
+ genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm7250b@2:qcom,usb-pdphy@1700/usbpd/usbpd0/wakeup u:object_r:sysfs_wakeup:s0
+-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm7250b@2:qcom,power-on@800/wakeup u:object_r:sysfs_wakeup:s0
++#genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm7250b@2:qcom,power-on@800/wakeup u:object_r:sysfs_wakeup:s0
+ genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm7250b@2:qpnp,qg/wakeup u:object_r:sysfs_wakeup:s0
+ 
+ # UFS
