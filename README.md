@@ -16,7 +16,7 @@ Initialize the lineage repo in `./src` (this takes hours)
 ```bash
 mkdir -p ./src
 cd ./src
-repo init -u https://github.com/LineageOS/android.git -b lineage-22.0 --git-lfs --no-clone-bundle
+repo init -u https://github.com/LineageOS/android.git -b lineage-22.2 --git-lfs --no-clone-bundle
 repo sync --force-sync --force-remove-dirty
 repo forall -c "git lfs install"
 repo forall -c "git lfs pull"
