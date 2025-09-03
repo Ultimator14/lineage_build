@@ -1,5 +1,6 @@
-diff --git a/src/com/android/settings/RingtonePreference.java b/src/com/android/settings/RingtonePreference.java
-index 6b9dad7ffbf..7e02aa57f70 100644
+# Patch settings app restricting ringtones to system ringtone app
+# Partially revert Change-Id: Ie19cbceb89842a75a180898abcce81b63c18d46c
+# See https://gitlab.com/LineageOS/issues/android/-/issues/9199
 --- a/src/com/android/settings/RingtonePreference.java
 +++ b/src/com/android/settings/RingtonePreference.java
 @@ -74,8 +74,7 @@ public class RingtonePreference extends Preference {
