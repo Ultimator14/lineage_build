@@ -57,11 +57,12 @@ Edit `$SRCDIR/.repo/local_manifests/roomservice.xml`
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  <remote  name="gitlab" fetch="https://gitlab.com/" review="review.lineageos.org" />
   <project path="device/oneplus/avicii" remote="github" name="Ultimator14/android_device_oneplus_avicii" revision="lineage-22.2" />
   <project path="vendor/oneplus/firmware" remote="github" name="Ultimator14/firmware_oneplus_avicii" revision="AC2003_11_F.23" />
   <project path="kernel/oneplus/sm7250" remote="github" name="Ultimator14/android_kernel_oneplus_sm7250" revision="lineage-22.2" />
   <project path="vendor/oneplus/avicii" remote="github" name="Ultimator14/vendor_oneplus_avicii" revision="lineage-22.2" />
-  <project path="vendor/oneplus/apps" remote="github" name="Ultimator14/camera_oneplus_avicii" revision="lineage-22.2" />
+  <project path="vendor/oneplus/apps" remote="gitlab" name="Ultimator/camera_oneplus_avicii" revision="lineage-22.2" />
   <project path="hardware/oplus" remote="github" name="Ultimator14/android_hardware_oplus" revision="lineage-22.2" />
 </manifest>
 ```
