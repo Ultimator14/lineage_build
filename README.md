@@ -63,18 +63,7 @@ Edit `$SRCDIR/.repo/local_manifests/roomservice.xml`
   <project path="vendor/oneplus/avicii" remote="github" name="Ultimator14/vendor_oneplus_avicii" revision="lineage-22.2" />
   <project path="vendor/oneplus/apps" remote="github" name="Ultimator14/camera_oneplus_avicii" revision="lineage-22.2" />
   <project path="hardware/oplus" remote="github" name="Ultimator14/android_hardware_oplus" revision="lineage-22.2" />
-  <!-- this replaces the default one in ../manifests/default.xml which is commented -->
-  <project path="frameworks/base" remote="github" name="Ultimator14/android_frameworks_base" revision="lineage-22.2" />
-  <!-- this replaces the default one in ../manifests/default.xml which is commented -->
-  <project path="system/sepolicy" remote="github" name="Ultimator14/android_system_sepolicy" revision="lineage-22.2" />
 </manifest>
-```
-
-Edit `$SRCDIR/.repo/manifests/default.xml` and remove or comment the two lines
-
-```xml
-<project path="frameworks/base" name="LineageOS/android_frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" />
-<project path="system/sepolicy" name="LineageOS/android_system_sepolicy" groups="pdk" />
 ```
 
 Afterwards run `repo sync`
