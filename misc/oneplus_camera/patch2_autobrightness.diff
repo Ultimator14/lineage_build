@@ -1,0 +1,15 @@
+# Patch auto brightness call
+#    
+# Fixes crash due to nonexient system library
+# `setOplusAutoBrightnessAdjustment() - Set allies1 auto brightness failed`
+--- a/onepluscamera/smali/com/oneplus/camera/CameraActivity.smali
++++ b/onepluscamera/smali/com/oneplus/camera/CameraActivity.smali
+@@ -6564,7 +6564,7 @@
+ 
+     const-string v5, "OwnerId"
+ 
+-    if-eqz v3, :cond_0
++    if-nez v3, :cond_0
+ 
+     .line 1936
+     move-object v3, p0

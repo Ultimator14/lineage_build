@@ -1,0 +1,16 @@
+# Patch com.oplus.os.LinearmotorVibrator call
+#    
+# Fixes crash due to nonexistent system service
+# `TypeCastException: null cannot be cast to non-null type com.oplus.os.LinearmotorVibrator`
+#
+--- a/onepluscamera/smali_classes2/com/oneplus/util/Vibrator$Companion.smali
++++ b/onepluscamera/smali_classes2/com/oneplus/util/Vibrator$Companion.smali
+@@ -478,7 +478,7 @@
+     :try_end_0
+     .catchall {:try_start_0 .. :try_end_0} :catchall_0
+ 
+-    if-eqz v0, :cond_0
++    if-nez v0, :cond_0
+ 
+     monitor-exit p0
+ 
