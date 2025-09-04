@@ -9,7 +9,7 @@ keytool -genkey -v -keystore onepluscamera.keystore -keyalg RSA -keysize 2048 -v
 # CN=OnePlus, OU=SW, O=OnePlus, L=Shenzhen, ST=Guangdong, C=CN
 ```
 
-Get the apk from `https://github.com/Ultimator14/camera_oneplus_avicii`, path `proprietary/system_ext/priv-app/OnePlusCamera`.
+Get the apk from `https://gitlab.com/Ultimator/camera_oneplus_avicii`, path `proprietary/system_ext/priv-app/OnePlusCamera`.
 
 ## Patch
 
