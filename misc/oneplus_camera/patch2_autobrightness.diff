@@ -2,6 +2,14 @@
 #    
 # Fixes crash due to nonexient system library
 # `setOplusAutoBrightnessAdjustment() - Set allies1 auto brightness failed`
+#
+# The app checks whether the device is a oneplus device by reading build.prop.
+# If that is the case, it tries to enable auto-brightness feature and crashes, because
+# the needed system library is not installed.
+#
+# This patch reverts the first check, instead of activating the fetaure
+# on a supported device, it returns immediately.
+#
 --- a/onepluscamera/smali/com/oneplus/camera/CameraActivity.smali
 +++ b/onepluscamera/smali/com/oneplus/camera/CameraActivity.smali
 @@ -6564,7 +6564,7 @@

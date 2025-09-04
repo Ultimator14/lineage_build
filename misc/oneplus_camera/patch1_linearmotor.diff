@@ -3,6 +3,13 @@
 # Fixes crash due to nonexistent system service
 # `TypeCastException: null cannot be cast to non-null type com.oplus.os.LinearmotorVibrator`
 #
+# The apk requires a system service to be in place.
+# It first checks whether this service has been initiated already.
+# If not, it tries to load it and crashes.
+#
+# This patch reverts the first check. The app checks if the service is alread initiated.
+# And instead of initiating it, we instantly return and skipt the crash.
+#
 --- a/onepluscamera/smali_classes2/com/oneplus/util/Vibrator$Companion.smali
 +++ b/onepluscamera/smali_classes2/com/oneplus/util/Vibrator$Companion.smali
 @@ -478,7 +478,7 @@
